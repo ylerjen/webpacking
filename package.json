@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/ylerjen/webpacking/issues"
   },
-  "homepage": "https://github.com/ylerjen/webpacking#readme"
+  "homepage": "https://github.com/ylerjen/webpacking#readme",
+  "devDependencies": {
+    "babel-loader": "^6.2.4",
+    "connect": "^3.4.1",
+    "serve-static": "^1.10.2"
+  }
 }
