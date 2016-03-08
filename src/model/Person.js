@@ -1,12 +1,12 @@
 class Person {
     constructor (firstName, lastName, birthdate) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.birthdate = birthdate;
+        this._firstName = firstName;
+        this._lastName = lastName;
+        this._birthdate = birthdate;
     }
     
     getFullName () {
-        return this.firstName + " " + this.lastName;
+        return this._firstName + " " + this._lastName;
     }
 }
 

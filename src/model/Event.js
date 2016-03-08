@@ -1,24 +1,26 @@
 class Event {
     constructor (title, eventDate) {
-        this.title = title;
-        this.eventDate = eventDate;
-        this.subscriber = [];
+        this._title = title;
+        this._eventDate = eventDate;
+        this._subscriber = [];
     }
     
     getDate () {
-        return this.eventDate;
+        return this._eventDate;
     }
     
     getTitle () {
-        return this.title;
+        return this._title;
     }
     
-    subscribe (person) {
-        this.subscriber.push(person);
+    subscribe (...person) {
+        for (var i = 0, nbPerson = person.length; i < nbPerson; i++) {            
+            this._subscriber.push(person[i]);
+        }
     }
     
     getNumberOfSubscriber () {
-        return this.subscriber.length;
+        return this._subscriber.length;
     }
 }
 
