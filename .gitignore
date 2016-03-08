@@ -1,2 +1,5 @@
-// nodes packages
+// nodes packages dir
 node_modules
+
+// compiled files dir
+dist
