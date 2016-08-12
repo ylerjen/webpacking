@@ -1,6 +1,36 @@
+var path = require('path');
+
+module.exports = {
+    entry: ["./src/sass/styleBundle.js", "./src/js/app.js"],
+    output: {
+        filename: "./dist/bundle.js"
+    },
+    module: {
+        loaders: [
+            {
+                test: /\.js$/,  // target .js files
+                exclude: /node_modules/,
+                loader: 'babel-loader', // use the babel-loader
+                query: {
+                    presets: ['es2015'] // use the preset es2015 for babel
+                }
+            },
+            {
+                test: /\.scss$/,
+                exclude: /node_modules/,
+                loaders: ["style", "css", "sass"] // [3] converts css into inline styles | [2] loads up the css | [1] converts scss files to css files
+            }
+        ]
+    },
+    sassLoader: {
+        includePaths: [path.resolve(__dirname, "./src/sass")]
+    },
+    watch: true
+};
+
+/*
 var autoprefixer = require('autoprefixer'),
     webpack = require('webpack'),
-    path = require('path');
 
 
 module.exports = {
@@ -32,4 +62,4 @@ module.exports = {
             browsers: ['last 2 versions']
         })
     ]
-};
+};*/
