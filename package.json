@@ -4,7 +4,8 @@
   "description": "Trying to configure a working webpack es6/sass app",
   "main": "index.js",
   "scripts": {
-    "test": "node node_modules//webpack//bin//webpack"
+    "start": "node node_modules//webpack//bin//webpack -p",
+    "dev": "webpack-dev-server --inline --port 3000"
   },
   "repository": {
     "type": "git",
